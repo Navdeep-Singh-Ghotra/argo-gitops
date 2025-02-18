@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: sealink
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/Navdeep-Singh-Ghotra/argo-gitops.git
+    path: apps/sealink
+    targetRevision: main
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

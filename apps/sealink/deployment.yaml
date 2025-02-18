@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: sealink
+  name: sealink
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: sealink
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: sealink
+    spec:
+      containers:
+      - image: navdeepsinghghotra/passwdgen:1.0.0
+        name: passwdgen
+        ports:
+        - containerPort: 8084
+        resources: {}
+status: {}
