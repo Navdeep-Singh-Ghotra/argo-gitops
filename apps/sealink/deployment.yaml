@@ -20,8 +20,6 @@ spec:
       containers:
       - image: navdeepsinghghotra/passwdgen:1.0.0
         name: dockerhubnavdeep
-        imagePullSecrets:
-        - name: dockerhubnavdeep
         ports:
         - containerPort: 8084
         resources: {}
