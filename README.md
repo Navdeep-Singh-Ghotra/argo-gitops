@@ -2,10 +2,10 @@
 Test projects implementing gitops
 
 Install argo cd 
-./installargo.sh
+```./installargo.sh```
 
 test argo cd installation
-argocd version
+```argocd version```
 
 install argocd in kubebernetes cluster
 ```
